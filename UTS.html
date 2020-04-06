@@ -32,6 +32,10 @@
 			<p>Total Pengembalian : <span id="totalpengembalian"></span></p>
 		</div>
 
+		<ul data-role="listview">
+			
+		</ul>
+
 	</div>
 
 </body>
@@ -40,6 +44,8 @@
 	function output(){
 		var valuepinjaman = document.getElementById('pinjaman').value;
 		var valuewaktu = document.getElementById('waktupinjam').value;
+
+
 
 		if (parseInt(valuewaktu)>=1 && parseInt(valuewaktu)<=6) {
 			var hasilkali = parseInt(valuepinjaman) + (parseInt(valuepinjaman) * 0.02 * parseInt(valuewaktu))
@@ -52,7 +58,11 @@
 		else if (parseInt(valuewaktu)>12) {
 			var hasilkali = parseInt(valuepinjaman) + (parseInt(valuepinjaman) * 0.01 * parseInt(valuewaktu))
 			document.getElementById('totalpengembalian').innerHTML =parseInt(valuepinjaman)+" + "+ "("+parseInt(valuepinjaman)+" * 1% * " +parseInt(valuewaktu)+") = "+parseInt(hasilkali);
-		}		
+		}
+		var ul = $("ul");
+		var row = "<li> Pinjaman : "+parseInt(valuepinjaman)+" Waktu : "+ parseInt(valuewaktu) + " Yang Harus di Bayar : " + parseInt(hasilkali)+"</li>";
+		ul.html(ul.html()+row);
+
 	}
 </script>
 
