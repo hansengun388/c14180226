@@ -72,7 +72,7 @@
 
 
 		var harusdibayar = parseInt(hasilkali) * parseInt(waktupinjam);
-		var isidetail = "<p>Harus Bayar "+parseInt(valuewaktu)+" Kali,Total yang harus di bayar : "+ parseInt((hasilkali)*parseInt(valuewaktu))+"</p>"
+		var isidetail = "<p>Harus Bayar "+parseInt(valuewaktu)+" Kali,Perbulan yang harus di bayar : "+ parseInt((hasilkali)/parseInt(valuewaktu))+"</p>"
 
 		var ul = $("ul");
 		var row = "<li class = 'ui-li-static ui-body-inherit'><a href='#perhitungan' onclick='test();'> Pinjaman : "+parseInt(valuepinjaman)+" Waktu : "+ parseInt(valuewaktu) + " Yang Harus di Bayar : " + parseInt(hasilkali)+"</a></li>";
